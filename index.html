@@ -12,7 +12,7 @@
       <h1>ToDo List</h1>
     </header>
     <main>
-      <form id="task-form">
+      <form id="task-form" class="flex flex-row gap-4 place-content-between">
         <input
           type="text"
           class="border rounded p-2"
@@ -49,18 +49,17 @@
         <table>
     <thead>
       <tr>
-        <th>Nama Tugas</th>
-        <th>Jatuh Tempo</th>
+        <th>Name Task</th>
+        <th>Due Date</th>
         <th>Status</th>
-        <th>Aksi</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody id="task-items"></tbody>
   </table>
     </main>
-    <footer>
-      <p>&copy; 2025 My Website</p>
-      <p>Contact: <a href="mailto:info@mywebsite.com">info@mywebsite.com</a></p>
+    <footer class="text-center mt-25 bg-black p-5 rounded-xl w-[500px] justify-self-center mx-auto">
+      <p>&copy; 2025 My ToDo List @SatyoAp</p>
     </footer>
   </body>
   <script src="js/script.js"></script>
