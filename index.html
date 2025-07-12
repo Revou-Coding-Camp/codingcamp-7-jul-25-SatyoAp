@@ -3,13 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
-    <h1>Welcome to My Page</h1>
-    <p>This is a simple HTML document.</p>
-    <script>
-      console.log("Hello, World!");
-    </script>
+    <header>
+      <h1>ToDo List</h1>
+    </header>
+    <main>
+      <form id="task-form">
+        <input
+          type="text"
+          class="border rounded p-2"
+          id="todo-input"
+          placeholder="Add a new task"
+        />
+        <input type="date" class="border rounded p-2" id="due-date" placeholder="Due date" />
+        <button
+          type="submit"
+          class="add-btn bg-blue-500 rounded w-[40px] text-white p-2 hover:bg-blue-600 cursor-pointer"
+          id="add-btn"
+        >
+          +
+        </button>
+      </form>
+      <section class="display flex flex-row place-content-between gap-4 mt-4">
+        <div>
+          <button class="bg-green-500 rounded w-[150px] text-white p-2 hover:bg-green-600 cursor-pointer" id="show-all-btn">
+            Show Task All
+          </button>
+          <button class="bg-green-500 rounded w-[90px] text-white p-2 hover:bg-green-600 cursor-pointer" id="complete-btn">
+            Complete
+          </button>
+          <button class="bg-yellow-500 rounded w-[120px] text-white p-2 hover:bg-yellow-600 cursor-pointer" id="in-progress-btn">
+            In Progress
+          </button>
+        </div>
+        <button class="bg-red-500 rounded w-[60px] text-white p-2 hover:bg-red-600 cursor-pointer" id="delete-btn">
+          Delete
+        </button>
+      </section>
+      <section class="task-list mt-4" id="task-list">
+        <h2 class="text-xl font-bold">Tasks</h2>
+        <table>
+    <thead>
+      <tr>
+        <th>Nama Tugas</th>
+        <th>Jatuh Tempo</th>
+        <th>Status</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody id="task-items"></tbody>
+  </table>
+    </main>
+    <footer>
+      <p>&copy; 2025 My Website</p>
+      <p>Contact: <a href="mailto:info@mywebsite.com">info@mywebsite.com</a></p>
+    </footer>
   </body>
+  <script src="js/script.js"></script>
 </html>
